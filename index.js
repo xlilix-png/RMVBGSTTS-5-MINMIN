@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 });
 app.listen(port, () => console.log('\x1b[36m%s\x1b[0m', `|    🔗 Listening to RTX : ${port}`));
 
-const statusMessages = ["I love B. Bunny", "Find Easter Eggs", "S.E.A.L."]; 
+const statusMessages = ["Check Updates", "Get a Ticket", "@PIXBIT"]; 
 let currentIndex = 0;
 
 async function login() {
@@ -32,7 +32,7 @@ async function login() {
 function updateStatus() {
   const currentStatus = statusMessages[currentIndex];
   client.user.setPresence({
-    activities: [{ name: currentStatus, type: ActivityType.Streaming, url: "https://www.twitch.tv/blitzz_seal"}],
+    activities: [{ name: currentStatus, type: ActivityType.Streaming, url: "https://www.twitch.tv/aceu"}],
     status: 'dnd', 
   });
   currentIndex = (currentIndex + 1) % statusMessages.length;
